@@ -2,6 +2,15 @@
 
 This is the official Homebrew tap for [xc-mcp](https://github.com/toba/xc-mcp), an MCP server for Xcode development.
 
+## Acknowledgments
+
+xc-mcp is an amalgamation of excellent work by others. Full credit goes to the original tool builders:
+
+- **[giginet/xcodeproj-mcp-server](https://github.com/giginet/xcodeproj-mcp-server)** - The original MCP server for Xcode project manipulation that xc-mcp is based on
+- **[tuist/xcodeproj](https://github.com/tuist/xcodeproj)** - Swift library for reading and writing Xcode project files
+- **[modelcontextprotocol/swift-sdk](https://github.com/modelcontextprotocol/swift-sdk)** - Official Swift SDK for the Model Context Protocol
+- **[Ryu0118/xcstrings-crud](https://github.com/Ryu0118/xcstrings-crud)** - Foundation for the .xcstrings localization functionality
+
 ## Installation
 
 ```bash
