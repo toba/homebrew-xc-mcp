@@ -1,26 +1,22 @@
 class XcMcp < Formula
   desc "MCP server for Xcode development - build, test, run, and debug iOS/macOS apps"
   homepage "https://github.com/toba/xc-mcp"
-  url "https://github.com/toba/xc-mcp/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "52c1616791eed2389fd3391f277f0e85afc27b50aa416f363d5ddf15a9e31f47"
+  url "https://github.com/toba/xc-mcp/releases/download/v0.2.0/xc-mcp-v0.2.0-arm64.tar.gz"
+  sha256 "PLACEHOLDER_SHA256"
   license "MIT"
-  head "https://github.com/toba/xc-mcp.git", branch: "main"
 
-  depends_on xcode: ["16.0", :build]
   depends_on :macos => :sequoia
+  depends_on arch: :arm64
 
   def install
-    system "swift", "build",
-           "--disable-sandbox",
-           "-c", "release"
-
-    bin.install ".build/release/xc-mcp"
-    bin.install ".build/release/xc-project"
-    bin.install ".build/release/xc-simulator"
-    bin.install ".build/release/xc-device"
-    bin.install ".build/release/xc-debug"
-    bin.install ".build/release/xc-swift"
-    bin.install ".build/release/xc-build"
+    bin.install "xc-mcp"
+    bin.install "xc-project"
+    bin.install "xc-simulator"
+    bin.install "xc-device"
+    bin.install "xc-debug"
+    bin.install "xc-swift"
+    bin.install "xc-build"
+    bin.install "xc-strings"
   end
 
   def caveats
@@ -30,7 +26,7 @@ class XcMcp < Formula
       Configure with Claude Code:
         claude mcp add xc-mcp -- #{bin}/xc-mcp
 
-      Focused servers available: xc-project, xc-simulator, xc-device, xc-debug, xc-swift, xc-build
+      Focused servers available: xc-project, xc-simulator, xc-device, xc-debug, xc-swift, xc-build, xc-strings
     EOS
   end
 
