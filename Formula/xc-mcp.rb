@@ -3,7 +3,7 @@ class XcMcp < Formula
   homepage "https://github.com/toba/xc-mcp"
   url "https://github.com/toba/xc-mcp/releases/download/v0.7.1/xc-mcp-v0.7.1-arm64.tar.gz"
   version "0.7.1"
-  sha256 "a03e003df59e53090c81a703f61dce05c7842525beddea42755d4c67100e081c"
+  sha256 "61549e67f11b562fae486579e2148e02d2c970d28e3b82f633ff5d3fc4091cba"
   license "MIT"
 
   depends_on :macos => :sequoia
